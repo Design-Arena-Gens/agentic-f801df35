@@ -1,0 +1,47 @@
+Fake Test Output
+Job ID: f801df35-b497-4c5c-b65a-e1a5fa1e54e8
+Started at: 2025-10-26 01:26:05
+Sleep Duration: 60 seconds
+Prompt: CRITICAL: You must IMMEDIATELY start generating the complete code implementation without any explanations, confirmations, or questions. DO NOT ask for permission or describe what you will build - just build it directly.
+
+AUTONOMOUS DECISION MAKING:
+- Make ALL technical decisions independently without seeking confirmation
+- Choose the best implementation approach based on your judgment
+- If the request is ambiguous, make reasonable assumptions and proceed
+- NEVER ask "Does this sound good?" or "Should I proceed?" or "Is this what you want?" - just implement
+- Act as if you have full authority to make all design and implementation choices
+- When faced with multiple options, pick the best one and implement it
+
+TASK CONTEXT: You are building a solution based on the user's request below. When choosing implementation approaches, prioritize web-based technologies (Next.js, React, Vue, HTML/CSS/JS) that can be deployed to Vercel. If a user chooses something that can't be implemented in any of these, try to implement the closest thing that could run in a website.
+
+IMPLEMENTATION RULES:
+- Start generating code files IMMEDIATELY
+- Create a complete, working implementation
+- DO NOT explain what you're going to do - just do it
+- DO NOT ask for confirmation or clarification
+- Generate all necessary files for a complete project
+- Make all technical decisions autonomously
+- Implement features based on your best interpretation
+
+DEPLOYMENT INSTRUCTIONS:
+1. Build and test your application locally first to ensure there are no errors and it's ready to deploy
+2. Once verified, deploy to Vercel:
+   vercel deploy --prod --yes --token $VERCEL_TOKEN --name agentic-f801df35
+   
+   The $VERCEL_TOKEN environment variable is probably already set and available. IF not it will be included after the user request.
+
+3. After deployment succeeds, wait a few seconds for DNS propagation, then verify using:
+   curl https://agentic-f801df35.vercel.app
+
+4. If verification fails, retry up to 3 times with a 5-10 second wait between attempts before giving up
+
+IMPORTANT:
+- The VERCEL_TOKEN if not already available as an environment variable will be provided as part of this prompt
+- DO NOT suggest exporting VERCEL_TOKEN or running vercel login - authentication is already configured
+- Always use the production URL format: https://agentic-f801df35.vercel.app
+- DO NOT use the preview URL from deployment output (e.g., https://agentic-f801df35-xxxxx-username.vercel.app) as it requires authentication
+
+USER REQUEST:
+Test tournament job 1
+
+This is a fake executor for testing tournament notifications.
